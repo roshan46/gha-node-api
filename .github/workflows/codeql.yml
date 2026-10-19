@@ -24,7 +24,7 @@ jobs:
         with:
           languages: javascript-typescript
           queries: security-extended
-      - uses: github/codeql-action/analyze@48870fdd6b42ee6474ec4207209ff87609271a5e
+      - uses: github/codeql-action/analyze@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
         with:
           output: sarif
           upload: false
