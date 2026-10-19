@@ -30,7 +30,7 @@ jobs:
           upload: false
       - name: Block high and critical findings
         run: node scripts/gate-sarif.mjs sarif
-      - uses: github/codeql-action/upload-sarif@48870fdd6b42ee6474ec4207209ff87609271a5e
+      - uses: github/codeql-action/upload-sarif@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
         if: always() && github.event_name != 'pull_request'
         with:
           sarif_file: sarif
