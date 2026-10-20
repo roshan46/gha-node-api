@@ -22,7 +22,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
-          node-version: 'not-real-test-version'
+          node-version: '24.14.0'
           package-manager-cache: false
       - name: Restore package downloads
         id: cache
