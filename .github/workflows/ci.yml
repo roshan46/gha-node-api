@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   quality:
-    uses: roshan46/gha-reusable-workflows/.github/workflows/node-quality.yml@e404a35011dc89c1d810ddac3bf5f238dfc8180f
+    uses: roshan46/gha-reusable-workflows/.github/workflows/node-quality.yml@d05401d0f6d3f9f49e605965a85f979063630101
     with:
       node-version: '24.14.0'
     permissions:
@@ -25,7 +25,7 @@ jobs:
       contents: read
     steps:
       - name: Write component summary
-        uses: roshan46/gha-reusable-workflows/summary@e404a35011dc89c1d810ddac3bf5f238dfc8180f
+        uses: roshan46/gha-reusable-workflows/summary@d05401d0f6d3f9f49e605965a85f979063630101
         with:
           component: node-api
 
