@@ -17,3 +17,20 @@ jobs:
       node-version: '24.14.0'
     permissions:
       contents: read
+  summary:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Write component summary
+        uses: roshan46/gha-reusable-workflows/summary@e404a35011dc89c1d810ddac3bf5f238dfc8180f
+        with:
+          component: node-api
+
+      - name: Show tested revision
+        shell: bash
+        env:
+          REVISION: ${{ needs.quality.outputs.revision }}
+        run: printf 'Tested %s\n' "$REVISION"
